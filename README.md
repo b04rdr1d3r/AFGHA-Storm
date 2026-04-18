@@ -13,3 +13,6 @@ CTLD and CSAR (using MIST, CTLD and CSAR scripts)
 3 tanker tracks
 an AWACS
 
+requires MOOSE, MIST, CTLD and CSAR scripts (included)
+All custom scripts are in the repository should you want to tweak them
+
