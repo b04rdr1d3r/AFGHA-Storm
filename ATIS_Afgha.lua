@@ -1,0 +1,16 @@
+-- ATIS_Afgha.lua
+atisKandahar = ATIS:New("Kandahar", 144.0)
+atisKandahar:SetTACAN(75)
+atisKandahar:SetRadioRelayUnitName("Radio Relay Kandahar")
+atisKandahar:SetActiveRunway("23")
+atisKandahar:SetTowerFrequencies({125.500, 360.200})
+--atisKandahar:AddILS(110.1, "23")
+atisKandahar:Start()
+
+-- atisBagram = ATIS:New("Bagram", 146.0)
+-- atisBagram:SetTACAN(74)
+--atisBagram:SetRadioRelayUnitName("Radio Relay Bagram")
+-- atisBagram:SetActiveRunway("21L")
+-- atisBagram:SetTowerFrequencies({120.100, 325.750})
+--atisBagram:AddILS(112.70, "21L")
+-- atisBagram:Start()
