@@ -19,6 +19,7 @@ Spawn_Taliban1 = SPAWN:New( "Taliban Convoy 1" , false)
 
     -- Create a temporary 1 km radius zone around the convoy
     local zoneAroundConvoy = ZONE_RADIUS:New("Zone_T1_1km", convoyVec2, 1000)
+    zoneAroundConvoy:DrawZone(coalition.side.BLUE, {0, 0, 1}, 0.3) -- Blue, 30% opacity
 
     -- Spawn Patrol UK somewhere inside that 1 km zone
     P1 = SPAWN:New("Patrol UK")
@@ -26,6 +27,8 @@ Spawn_Taliban1 = SPAWN:New( "Taliban Convoy 1" , false)
     local patrolCoord1 = P1:GetCoordinate():ToStringLLDMS()
     local messageText1 = "All airborne elements, this is Overlord, priority tasking. Friendly ground unit UK Patrol Zulu4-1, at coordinates " .. patrolCoord1 .. " reports possible troops in contact and requests immediate air cover. Provide armed overwatch and close air support-on-call for that grid."
     MessageBLUE = MESSAGE:New( messageText1, 120 ):ToCoalition( coalition.side.BLUE )
+    local mark1 = MARKER:New(patrolCoord1, "Patrol UK") 
+    mark1:ToAll() 
 
   end)
 Spawn_Taliban1:Spawn()
@@ -48,6 +51,7 @@ Spawn_Taliban2 = SPAWN:New( "Taliban Convoy 2" , false)
 
     -- Create a temporary 1 km radius zone around the convoy
     local zoneAroundConvoy = ZONE_RADIUS:New("Zone_T2_1km", convoyVec2, 1000)
+    zoneAroundConvoy:DrawZone(coalition.side.BLUE, {0, 0, 1}, 0.3) -- Blue, 30% opacity
 
     -- Spawn Patrol UK somewhere inside that 1 km zone
     P2 = SPAWN:New("Patrol USA")
@@ -55,6 +59,8 @@ Spawn_Taliban2 = SPAWN:New( "Taliban Convoy 2" , false)
     local patrolCoord2 = P2:GetCoordinate():ToStringLLDMS()
     local messageText2 = "All airborne elements, this is Overlord, priority tasking. Friendly ground unit US Patrol Bravo6-4, at coordinates " ..   patrolCoord2 .. " reports possible troops in contact and requests immediate air cover. Provide armed overwatch and close air support-on-call for that grid."
     MessageBLUE = MESSAGE:New( messageText2, 120 ):ToCoalition( coalition.side.BLUE )
+    local mark2 = MARKER:New(patrolCoord2, "Patrol US") 
+    mark2:ToAll()
 
   end)
 Spawn_Taliban2:Spawn()
